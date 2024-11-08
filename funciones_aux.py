@@ -15,7 +15,7 @@ def obtener_neurona_ganadora(patron, pesos, salidas, umbral):
     return -1
 
 def actualizar_pesos(patron, peso, tasa):
-    nuevo_peso = np.add(peso,(tasa*(peso-patron)))
+    nuevo_peso = np.add(peso,(tasa*(patron-peso)))
     return nuevo_peso
 
 def calcular_similitud_cos(P, W):
